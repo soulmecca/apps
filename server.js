@@ -20,7 +20,7 @@ var server = net.createServer(function(c){
 				c.write("There is no message left")
 			}else{
 				var parsed = JSON.parse(read);
-				c.write(chalk.cyan(".  *--------o--------*\n"+"---|  All Messages!  |---\n"+"   *--------o--------*"))
+				c.write(chalk.cyan(".  *--------o--------*\n"+"---|  All Messages!  |---\n"+"   *--------o--------*\n"))
 				parsed.forEach(function(val,idx){	
 					c.write(JSON.stringify(idx)+". " +JSON.stringify(val[idx])+'\n')
 				})	
@@ -43,7 +43,7 @@ var server = net.createServer(function(c){
 				var parsed = JSON.parse(read);
 				parsed.splice(data.toString().trim().split(' ')[1], 1);
 				fs.writeFile('message.json', JSON.stringify(parsed));
-				c.write("The message has been deleted")    
+				c.write("The message has been deleted\n")    
 			}
 		}
 		// As a first time, a message will be stored in a message.json file.
