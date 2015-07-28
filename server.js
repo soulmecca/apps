@@ -23,7 +23,7 @@ var server = net.createServer(function(c){
 				c.write(chalk.cyan(".  *--------o--------*\n"+"---|  All Messages!  |---\n"+"   *--------o--------*\n"))
 				parsed.forEach(function(val,idx){	
 					c.write(JSON.stringify(idx)+". " +JSON.stringify(val[idx])+'\n')
-				})	
+				});	
 			}
 		}else if (data.toString().trim() === 'commands'){
 			c.write(",---. ,---. ,--,--,--.,--,--,--. ,--,--.,--,--,  ,-|  | ,---.\n| .--'| .-. ||        ||        |' ,-.  ||      \' .-. |(  .-'\n\ `--.' '-' '|  |  |  ||  |  |  |\ '-'  ||  ||  |\ `-' |.-'  `)\n`---' `--`--`--'`--`--`--' `--`--'`--''--' `---' `----'\n")
