@@ -1,7 +1,7 @@
 var net = require('net');
 var client = net.Socket();
 
-client.connect({port: 3000, host: 'localhost'}, function(){
+client.connect({port: 3000, host: '104.236.16.138'}, function(){
 	console.log('connected to server');
 	// client.write("Hello Server");
 
